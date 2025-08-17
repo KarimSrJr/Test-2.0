@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f1a">
+  <title>Home · Football Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <meta name="description" content="Football Hub: fixtures, tables, teams, and news.">
+</head>
+<body data-page="home">
+  <nav>
+    <div class="nav-inner container">
+      <a class="brand" href="./index.html" aria-label="Football Hub Home">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#66a6ff" opacity=".25"/>
+          <path d="M12 30h40v4H12z" fill="#5cf2c7"/>
+          <path d="M32 12a20 20 0 100 40 20 20 0 000-40zm0 6a14 14 0 110 28 14 14 0 010-28z" fill="#66a6ff" opacity=".75"/>
+        </svg>
+        <span>Football Hub</span>
+      </a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./fixtures.html">Fixtures</a>
+        <a href="./teams.html">Teams</a>
+        <a href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div>
+        <h1>Beautiful, modern football stats — fast and simple.</h1>
+        <p class="lead">Curated fixtures, a clean league table, and top scorers — all in a lightweight site you can host for free.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
+          <a class="btn" href="./fixtures.html">See Fixtures</a>
+          <a class="btn btn-outline" href="./teams.html">League Table</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="media"></div>
+        <div class="body">
+          <div class="kpis">
+            <div class="kpi"><div class="num" id="kpiMatches">—</div><div><div>Matches</div><small>Scheduled</small></div></div>
+            <div class="kpi"><div class="num" id="kpiGoals">—</div><div><div>Avg Goals</div><small>Per match</small></div></div>
+            <div class="kpi"><div class="num" id="kpiScorers">—</div><div><div>Top Scorers</div><small>In dataset</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid grid-3" style="margin-top:24px">
+    <section class="card">
+      <div class="card-header"><h3>Upcoming Fixtures</h3><span class="badge">Demo</span></div>
+      <div class="card-body">
+        <div id="fixtureList" class="grid" style="gap:12px"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header"><h3>League Snapshot</h3></div>
+      <div class="card-body">
+        <table class="table" id="tableLeague">
+          <thead><tr><th>#</th><th>Team</th><th>Pts</th><th>GD</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header"><h3>Gallery</h3></div>
+      <div class="card-body">
+        <div class="img-grid">
+          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop')"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Made with ❤ for football. Host on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+  </footer>
+  <script src="./assets/script.js" defer></script>
+</body>
+</html>
